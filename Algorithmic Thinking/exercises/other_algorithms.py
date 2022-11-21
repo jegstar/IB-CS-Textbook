@@ -63,10 +63,28 @@ def rotateArray(arr, step):
 
     return output
 
-letters = generateArray(4,5, 'letter')
+def changeCalculator(cash, price):
+    currency = [50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01]
+    currency = [x*100 for x in currency]
+    change = (cash - price) * 100
+    pointer = 0
+    toReturn = []
+    while change > 0:
+        if currency[pointer] > change:
+            pointer += 1
+        else:
+            toReturn.append(currency[pointer] / 100)
+            change -= currency[pointer]
+  
+    return toReturn
 
-pretty(letters)
+
+arr = generateArray(5,4, 'letter')
+pretty (arr)
 
 print()
-letters = rotateArray(letters, 3)
-pretty (letters)
+
+output = rotateArray(arr, 2)
+
+pretty (output)
+# def numberSpiral(layers):
