@@ -4,7 +4,7 @@ A flowchart is a way of visually representing an algorithm. The whole point of a
 
 An example would be the following:
 
-|![Flowchart](assets\tea_flow_chart.png)|
+|![Flowchart](assets/tea_flow_chart.png)|
 |:--:|
 |[Source](https://www.twinkl.com.tw/teaching-wiki/flow-chart)|
 
