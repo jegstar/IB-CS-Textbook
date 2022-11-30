@@ -64,8 +64,7 @@ def rotateArray(arr, step):
     return output
 
 def changeCalculator(cash, price):
-    currency = [50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01]
-    currency = [x*100 for x in currency]
+    currency = [5000,2000,1000,500,200,100,50,20,10,5,2,1]
     change = (cash - price) * 100
     pointer = 0
     toReturn = []
@@ -78,6 +77,7 @@ def changeCalculator(cash, price):
   
     return toReturn
 
+print(changeCalculator(20, 14.01))
 
 
 def numberSpiral(layers):

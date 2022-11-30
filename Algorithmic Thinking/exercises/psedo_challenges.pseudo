@@ -1,0 +1,51 @@
+// Coin change thing
+COST = 0.2
+PAID = 20
+CHANGE = PAID - COST
+COINS = new Collection()
+
+CURRENCY = [50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
+POINTER = 0
+
+loop while CHANGE > 0
+  if CURRENCY[POINTER] > CHANGE then
+    POINTER = POINTER + 1
+  else
+    CHANGE = CHANGE - CURRENCY[POINTER]
+    COINS.addItem(CURRENCY[POINTER])
+  end if
+end loop
+
+loop while COINS.hasNext()
+  output COINS.getNext()
+end loop
+
+// Prime numbers
+input N
+
+I = 3
+
+if N < 2 then
+  output "NOT PRIME"
+else if N mod 2 = 0 then
+  output "NOT PRIME"
+else
+  flag = 0
+
+
+  loop while I * I <= N
+    TEST = N mod I
+    if N mod I = 0 then
+      flag = flag + 1
+    end if
+    I = I + 2
+    
+  end loop
+
+  if flag = 0 then
+    output "PRIME"
+  else
+    output "NOT PRIME"
+  end if
+end if
+
