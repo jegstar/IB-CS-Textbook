@@ -11,10 +11,51 @@ An example would be the following:
 
 In this example, you can see a real life example of a flowchart for making a cup of tea. You can see as a visual representation of the process for making it. There are shapes, connected by arrows, that represent different parts of the process. The shapes are shown as follows:
 
-|Shape|Name|Description|Python|
-|---|---|---|---|
-|![terminator](assets\terminator.png)|Terminator|Starts and finishes the flowchart|```nothing for this!```|
-|![process](assets\process.png)|Process|This represents some change in the internal state of the program. In Python it is normally a line of code that contains the = sign|```x = 10```|
-|![input output](assets\io.png)|Input / Output|This represents some input or output in the program. It could be from the user or |```x = 10```|
+<table>
+<tr>
+<th>Shape </th>
+<th>Name </th>
+<th>Description</th>
+<th>Python</th>
+</tr>
+<tr>
+<td><img src="assets/terminator.png" alt="Terminator"></td>
+<td>Terminator</td>
+<td>Starts and finishes the flowchart.<br>NOTE: This will only have a single arrow going to / from it</td>
+<td> 
+
+```python 
+#nothing for this!
+```
+</td>
+</tr>
+<tr>
+<td><img src="assets/Process.png" alt="Process"></td>
+<td>Process</td>
+<td>This represents some change in the internal state of the program. In Python it is normally a line of code that contains the = sign</td>
+<td>
+
+```python
+x = 17
+myObject = someMethod(vairable)
+```
+</td>
+</tr>
+
+<tr>
+<td><img src="assets/io.png" alt="Input Output"></td>
+<td>Input Output</td>
+<td>This represents some input or output in the program. It could be from the user or some other location like a file or database. </td>
+<td>
+
+```python
+my_var = input()
+data = open("some_file.txt", "r")
+```
+</td>
+</tr>
+
+|![decision](assets/decision.png)|Decision|This represents a place where the code can branch. NOTE: A decision will always have more than one output arrow, normally marked with YES/NO or TRUE/FALSE|```if c < 10: # do stuff```<br> |
 
 
+</table>
