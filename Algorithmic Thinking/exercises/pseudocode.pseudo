@@ -48,3 +48,4 @@ else
     output "NOT PRIME"
   end if
 end if
+

@@ -79,12 +79,54 @@ def changeCalculator(cash, price):
     return toReturn
 
 
-arr = generateArray(5,4, 'letter')
-pretty (arr)
 
-print()
+def numberSpiral(layers):
+ 
+    output = [ [0]* layers for _ in range(layers)]
+    mid = layers // 2
 
-output = rotateArray(arr, 2)
+    count = 1
+    ring = 1
+    output[mid][mid] = count
+    r = c = mid
 
-pretty (output)
-# def numberSpiral(layers):
+
+    while ring  < layers:
+        if ring % 2 == 1:
+            # step right
+            for i in range(ring):
+                c += 1
+                count += 1
+                output [r][c] = count
+            # step up
+            for i in range(ring):
+                r -= 1
+                count += 1
+                output [r][c] = count
+        else:
+            # step left
+            for i in range(ring ):
+                c -= 1
+                count +=1
+                output [r][c] = count
+
+            # step down
+            for i in range(ring ):
+                r += 1
+                count += 1
+                output [r][c] = count
+        ring += 1
+
+    for i in range(ring - 1):
+        c += 1
+        count += 1
+        output [r][c] = count
+    return output
+
+pretty(numberSpiral(5))
+
+
+lst = [2,5,2,8,4]
+
+for item in lst:
+    print(item)
